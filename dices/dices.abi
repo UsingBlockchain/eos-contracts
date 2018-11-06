@@ -1,0 +1,71 @@
+{
+    "____comment": "eVias EOS Smart Contracts - Dices Contract",
+    "version": "eosio::abi/1.0",
+    "structs": [{
+      "name": "subscribe",
+      "base": "",
+      "fields": [{
+        "name":"owner", 
+        "type":"account_name"
+      },{
+        "name":"account", 
+        "type":"account_name"
+      }]
+    },{
+      "name": "play",
+      "base": "",
+      "fields": [{
+        "name":"account", 
+        "type":"account_name"
+      },{
+        "name":"seed", 
+        "type":"string"
+      }]
+    },{
+      "name": "highscore",
+      "base": "",
+      "fields": []
+    },{
+      "name": "player",
+      "base": "",
+      "fields": [{
+        "name":"who",
+        "type":"uint64"
+      },{
+        "name":"payer",
+        "type":"uint64"
+      },{
+        "name":"seed", 
+        "type":"string"
+      }{
+        "name":"score", 
+        "type":"checksum256"
+      }]
+    }],
+    "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+    }],
+    "actions": [{
+      "name": "subscribe",
+      "type": "subscribe",
+      "ricardian_contract": ""
+    },{
+      "name": "play",
+      "type": "play",
+      "ricardian_contract": ""
+    },{
+      "name": "highscore",
+      "type": "highscore",
+      "ricardian_contract": ""
+    }],
+    "tables": [{
+      "name": "players",
+      "type": "player",
+      "index_type": "i64",
+      "key_names" : ["who"],
+      "key_types" : ["uint64"]
+    }],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}

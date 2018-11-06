@@ -1,0 +1,24 @@
+{
+    "____comment": "eVias EOS Smart Contracts - Ping Contract",
+    "version": "eosio::abi/1.0",
+    "structs": [{
+      "name": "ping",
+      "base": "",
+      "fields": [{
+        "name":"receiver", 
+        "type":"account_name"
+      }]
+    }],
+    "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+    }],
+    "actions": [{
+      "name": "ping",
+      "type": "ping",
+      "ricardian_contract": ""
+    }],
+    "tables": [],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
